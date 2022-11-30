@@ -15,8 +15,8 @@ const ProductCategories = () => {
     return (
         <section className='mx-5'>
             <div className='text-center'>
-                <h2 className='text-4xl my-5 heading-font font-bold'>Why Choosing Fitness Cube</h2>
-                <p className='my-5 text-slate-500 para-font'>We handpick the best coaches and health experts from across the country to make sure you get <br /> the most personalized health care you deserve between those doctor visits.</p>
+                <h2 className='text-4xl my-5 heading-font font-bold'>Choose Your Categories</h2>
+                <p className='my-5 text-slate-500 para-font'>We provide 3 Categories for selling and buying TV.</p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 mx-10 gap-8'>
                 {

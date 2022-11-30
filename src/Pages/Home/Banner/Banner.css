@@ -9,8 +9,8 @@
 
 .banner-bg {
     /* background-image: url(../../../Assets/banner/banner-img-1.jpg); */
-    background-image: linear-gradient(to right, rgb(0, 0, 0, .6), rgb(0, 0, 0, .4)),
-        url(https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: linear-gradient(to right, rgb(11, 24, 74, .7), rgb(30, 53, 104, .4)),
+        url(https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
