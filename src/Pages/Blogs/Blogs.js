@@ -56,83 +56,22 @@ const Blogs = () => {
                 <div className="collapse-content text-start">
                     <div className="overflow-x-auto mx-auto text-center">
                         <img src="https://d2ms8rpfqc4h24.cloudfront.net/uploads/2021/02/Comparative-Analysis-of-Angularjs-vs-ReactJs-vs-VueJs.jpg" alt="" />
-                        {/* <table className="table w-full ">
 
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>JavaScript</th>
-                                    <th>Node.js</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <tr>
-                                    <th></th>
-                                    <td>It is an accessible, bridge, parsed, lightweight, reactive, and web apps programming language.</td>
-                                    <td>It's a bridge, open-source Js runtime environment for executing Js on the server.</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>It's a programming language, after all. Any browser with a competent browser engine will operate.</td>
-                                    <td>It's a JavaScript translator and environment that includes some valuable libraries for JavaScript programming.</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>It's most commonly used on client-side servers.</td>
-                                    <td>It's mainly popular on the server-side.</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>The node community does not care about JavaScript.</td>
-                                    <td>All node projects represent the JavaScript community.</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>It's made for creating network-centric apps.</td>
-                                    <td>It's made for real-time data-intensive apps that run on multiple platforms.</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>It's a new release of the ECMA script that works on the C++-based V8 engine.</td>
-                                    <td>C++, C, and JavaScript are used.</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>TypedJS, RamdaJS, and other JavaScript frameworks are examples.</td>
-                                    <td>Nodejs modules include Lodash and Express. All of these modules must be imported from npm.</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table> */}
                     </div>
                 </div>
             </div>
             <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box my-5">
                 <div className="collapse-title text-xl font-medium bg-slate-700 text-white">
-                    How does NodeJS handle multiple requests at the same time?
+                    How does prototypical inheritance work?
                 </div>
                 <div className="collapse-content text-start">
-                    <strong>NodeJS receives multiple client requests and places them into EventQueue.</strong>
+
                     <span className='flex align-middle'>
 
-                        <p className=' ml-2'><strong>1.</strong> Iterative - Incoming requests will go on a queue and be processed sequentially in the main loop. A interrupt handler, poll point in the loop, or a separate thread will accept incoming requests and append them to the queue as they arrive.</p>
+                        <p className=' ml-2'>Every object with its methods and properties contains an internal and hidden property known as [[Prototype]]. The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. Traditionally, in order to get and set the [[Prototype]] of an object, we use Object.getPrototypeOf and Object.setPrototypeOf. Nowadays, in modern language, it is being set using __proto__.</p>
                     </span> <br />
-                    <span className='flex align-middle'>
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200520193336/Untitled-Diagram108.png" alt="" />
 
-                        <p className=' ml-2'><strong>2.</strong> Multi-threading - The main loop will accept requests as they arrive and spawn a child thread to deal with it.</p>
-                    </span> <br />
-                    <span className='flex align-middle'>
-
-                        <p className=' ml-2'><strong>3.</strong> Multi-tasking - At startup the main line code will spawn a number of child processes, either copies of the primary server task or dedicated processor tasks. That number may be fixed or may be auto-ramping to spawn additional children as needed to handle the load. The main loop will then accept requests as they arrive and add them to a queue for one of the child processes either round robin or to the first child that is free. If requests arrive faster than the children can process them the main loop will either queue them for later processing as children free up or ramp up the number of children.</p>
-                    </span>
                 </div>
             </div>
         </div>
