@@ -18,8 +18,9 @@ const Header = () => {
 
 
 
-        <li> <Link to='/add_services' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>Add Services</Link></li>
+        <li> <Link to='/dashboard' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>Dashboard</Link></li>
         <li> <Link to='/my_review' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>My Reviews</Link></li>
+        <li> <Link to='/blogs' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>Blogs</Link></li>
 
         {
             user?.uid ? <>
@@ -32,9 +33,7 @@ const Header = () => {
             </>
         }
 
-        {/* </> */}
 
-        <li> <Link to='/blogs' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>Blogs</Link></li>
 
     </>
 
