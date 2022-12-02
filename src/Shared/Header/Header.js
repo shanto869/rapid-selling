@@ -16,14 +16,11 @@ const Header = () => {
     const meunItems = <>
         <li> <Link to='/' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>Home</Link></li>
 
-
-
-        <li> <Link to='/dashboard' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>Dashboard</Link></li>
-        <li> <Link to='/my_review' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>My Reviews</Link></li>
         <li> <Link to='/blogs' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>Blogs</Link></li>
 
         {
             user?.uid ? <>
+                <li> <Link to='/dashboard' className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>Dashboard</Link></li>
                 <li> <Link to='/' onClick={handleLogOut} className='btn btn-link text-white nav-font capitalize decoration-none text-lg hover:text-[#b2dd4c]'>Logout</Link></li>
 
             </> : <>
