@@ -26,7 +26,7 @@ export const routers = createBrowserRouter([
             },
             {
                 path: '/category/:id', element: <CategoryDetails></CategoryDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://rapid-reselling-server.vercel.app/products/${params.id}`)
             },
             {
                 path: '/blogs', element: <Blogs></Blogs>

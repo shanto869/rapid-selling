@@ -5,7 +5,7 @@ const AdvertiseProducts = () => {
     console.log(advertiseProducts)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/advertise_products`)
+        fetch(`https://rapid-reselling-server.vercel.app/advertise_products`)
             .then(res => res.json())
             .then(data => setAdvertiseProducts(data))
     }, [])
