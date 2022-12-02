@@ -4,9 +4,11 @@ import Main from "../Layout/Main";
 import Blogs from "../Pages/Blogs/Blogs";
 import CategoryDetails from "../Pages/CategoryDetails/CategoryDetails";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import MyOrder from "../Pages/Dashboard/MyOrder/MyOrder";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
+import MyWishlist from "../Pages/MyWishllist/MyWishlist";
 import SignUp from "../Pages/SignUp/SignUp";
 
 export const routers = createBrowserRouter([
@@ -36,6 +38,12 @@ export const routers = createBrowserRouter([
         children: [
             {
                 path: '/dashboard', element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/dashboard/wishlist', element: <MyWishlist></MyWishlist>
+            },
+            {
+                path: '/dashboard/order', element: <MyOrder></MyOrder>
             }
         ]
     }
