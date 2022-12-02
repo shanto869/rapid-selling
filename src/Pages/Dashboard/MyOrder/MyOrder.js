@@ -39,7 +39,9 @@ const MyOrder = () => {
                                 </th>
                                 <td className='para-font'>{order?.productName}</td>
                                 <td className='heading-font'>{order?.price}</td>
-                                <td>{order?.slot}</td>
+                                <td>
+                                    <button className="btn btn-xs btn-outline">Pay</button>
+                                </td>
                             </tr>)
                         }
 
