@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
+import Loader from '../../Blogs/Loader';
 import Product from '../Product/Product';
 
 const ProductCategories = () => {
@@ -7,10 +9,11 @@ const ProductCategories = () => {
     console.log(categories)
 
     useEffect(() => {
-        fetch('categories.json')
+        fetch('http://localhost:5000/productCategories')
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
+
 
     return (
         <section className='mx-5'>
