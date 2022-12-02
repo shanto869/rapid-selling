@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { IconName, FaRegHeart, FaHeart } from "react-icons/fa";
+import BookingModal from './BookingModal';
 
 const Product = ({ product }) => {
-    console.log(product)
+    const [wishList, setWishList] = useState(true)
     const { purchase_date, category_id, condition, description, image, location, originalPrice, phone, price, productName, years_of_use, _id } = product;
 
     return (
@@ -24,10 +26,16 @@ const Product = ({ product }) => {
                         <div class="w-5 h-5 bg-green-500 rounded-full"></div>
                         <p class="ml-3 text-green-500 font-bold">:Verified</p>
                     </div>
+                    <div className='ml-20 mt-4' onClick={() => setWishList(!wishList)}>
+                        {
+                            wishList ? <><FaRegHeart className='text-3xl text-red-700 cursor-pointer'></FaRegHeart></> : <><FaHeart className='text-3xl text-red-700 cursor-pointer'></FaHeart></>
+                        }
+                    </div>
                 </div>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-outline border-black border-2 rounded-3xl hover:bg-slate-700 text-black hover:text-white px-10 mt-6 btn-font">Book Now</button>
+                    <label htmlFor="booking-modal" className="btn btn-outline border-black border-2 rounded-3xl hover:bg-slate-700 text-black hover:text-white px-10 mt-6 btn-font">Book Now</label>
                 </div>
+                <BookingModal product={product}></BookingModal>
             </div>
         </div>
     );
