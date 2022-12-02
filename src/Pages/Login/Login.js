@@ -61,7 +61,7 @@ const Login = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                localStorage.setItem('fitness-cube', data.token)
+                localStorage.setItem('secret-token', data.token)
             })
     }
 

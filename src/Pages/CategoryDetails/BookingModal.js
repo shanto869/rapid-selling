@@ -13,17 +13,19 @@ const BookingModal = ({ product }) => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const price = form.price.value;
+        // const price = form.price.value;
         const phone = form.phone.value;
         const location = form.location.value;
         // console.log(date, name, slot, email, phone)
 
         const booking = {
-            name,
+            userName: name,
             email,
             price,
             phone,
-            location
+            location,
+            image,
+            productName
         }
         console.log(booking)
 
@@ -37,9 +39,8 @@ const BookingModal = ({ product }) => {
                 console.log(data)
 
                 if (data.acknowledged) {
-                    // setTreatment(null)
+                    form.reset()
                     toast.success('Booking Confirmed')
-                    // refetch()
                 }
                 else {
                     toast.error(data.message)
@@ -64,11 +65,11 @@ const BookingModal = ({ product }) => {
                         <input name='price' type="text" defaultValue={`Price: ${price} BDT`} disabled placeholder="Email Address" className="input input-bordered w-full" />
                         <input name='phone' type="number" placeholder="Phone Number" className="input input-bordered w-full" />
                         <input name='location' type="text" placeholder="Your Location" className="input input-bordered w-full" />
-                        <label htmlFor="booking-modal" type="submit" className='btn btn-outline w-full'>Submit</label>
+
+                        <button type="submit">
+                            <label htmlFor="booking-modal" className='btn btn-outline w-full'>Submit</label>
+                        </button>
                     </form>
-                    {/* <div className="modal-action">
-                        <label htmlFor="booking-modal" className="btn">Yay!</label>
-                    </div> */}
                 </div>
             </div>
         </div>

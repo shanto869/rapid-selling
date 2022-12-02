@@ -6,7 +6,7 @@ const MyWishlist = () => {
 
     return (
         <div className=''>
-            <h4 className='text-2xl my-5'>My Appointment</h4>
+            <h4 className='text-2xl my-5 text-center'>My Wishlist</h4>
             <div className="overflow-x-auto">
                 <table className="table w-full">
 

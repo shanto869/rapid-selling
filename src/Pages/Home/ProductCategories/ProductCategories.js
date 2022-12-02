@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
-import Loader from '../../Blogs/Loader';
 import Product from '../Product/Product';
 
 const ProductCategories = () => {
     const [categories, setCategories] = useState([])
-    console.log(categories)
 
     useEffect(() => {
         fetch('http://localhost:5000/productCategories')
@@ -26,11 +23,11 @@ const ProductCategories = () => {
                     categories.map(category => <Product key={category.id} category={category}></Product>)
                 }
             </div>
-            <div className='w-full text-center'>
+            {/* <div className='w-full text-center'>
                 <Link to='/services'>
                     <button className="btn btn-outline border-black border-2 rounded-3xl hover:bg-slate-700 text-black hover:text-white px-10 mt-6 btn-font">See All</button>
                 </Link>
-            </div>
+            </div> */}
         </section>
     );
 };

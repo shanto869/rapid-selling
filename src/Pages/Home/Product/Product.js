@@ -19,7 +19,7 @@ const Product = ({ category }) => {
                     </Link>
                     <hr />
                     <span className='flex justify-between mt-2'>
-                        <strong className='title-font font-bold'>Price: ${price}</strong>
+                        {/* <strong className='title-font font-bold'>Price: ${price}</strong> */}
 
                     </span>
                 </div>
